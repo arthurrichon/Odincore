@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`(191))
-) TYPE=InnoDB AUTO_INCREMENT=1 ;
+) Engine=InnoDB AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
   KEY `comment_date_gmt` (`comment_date_gmt`),
   KEY `comment_parent` (`comment_parent`),
   KEY `comment_author_email` (`comment_author_email`(10))
-) TYPE=InnoDB  AUTO_INCREMENT=2 ;
+) Engine=InnoDB  AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `wp_comments`
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
   `link_rss` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`link_id`),
   KEY `link_visible` (`link_visible`)
-) TYPE=InnoDB AUTO_INCREMENT=1 ;
+) Engine=InnoDB AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) TYPE=InnoDB  AUTO_INCREMENT=182 ;
+) Engine=InnoDB  AUTO_INCREMENT=182 ;
 
 --
 -- Contenu de la table `wp_options`
@@ -277,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) TYPE=InnoDB  AUTO_INCREMENT=2 ;
+) Engine=InnoDB  AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `wp_postmeta`
@@ -321,7 +321,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) TYPE=InnoDB  AUTO_INCREMENT=4 ;
+) Engine=InnoDB  AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `wp_posts`
@@ -346,7 +346,7 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) TYPE=InnoDB  AUTO_INCREMENT=2 ;
+) Engine=InnoDB  AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `wp_terms`
@@ -367,7 +367,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
   `term_order` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   KEY `term_taxonomy_id` (`term_taxonomy_id`)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 --
 -- Contenu de la table `wp_term_relationships`
@@ -392,7 +392,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) TYPE=InnoDB  AUTO_INCREMENT=2 ;
+) Engine=InnoDB  AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `wp_term_taxonomy`
@@ -415,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) TYPE=InnoDB  AUTO_INCREMENT=19 ;
+) Engine=InnoDB  AUTO_INCREMENT=19 ;
 
 --
 -- Contenu de la table `wp_usermeta`
@@ -461,7 +461,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
   PRIMARY KEY (`ID`),
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`)
-) TYPE=InnoDB  AUTO_INCREMENT=2 ;
+) Engine=InnoDB  AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `wp_users`

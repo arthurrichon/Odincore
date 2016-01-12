@@ -64,3 +64,11 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+
+require_once('wp_bootstrap_navwalker.php'); /*Register custom navigation walker*/
+register_nav_menus(
+    array(
+        'primary' => __('top_menu', 'Main Menu'),
+    )
+);

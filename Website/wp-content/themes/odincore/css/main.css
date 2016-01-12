@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+}
+
+/*WHERE*/
+.where{
+    margin-left: 20px;
+}
+
+
+/*FOOTER*/
+
+footer{
+    background: #00647C;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    padding-top: 15px;
+}
