@@ -1,11 +1,28 @@
-body{
-    height: 100vh;
+/*
+	RESET & BASIC SETUP
+*/
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/*WHERE*/
-.where{
-    margin-left: 20px;
+body{
+
+    overflow-y: hidden;
 }
+
+tr {
+    vertical-align: top;
+}
+
+
+/*
+	STRUCTURE
+*/
+.post {
+    width: 500px;
+}
+
 
 
 /*FOOTER*/
